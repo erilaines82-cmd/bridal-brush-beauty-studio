@@ -6,9 +6,9 @@ export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
       { title: "Pacotes e Preços — Noivas, Madrinhas e 15 Anos | Violeta Beauty" },
-      { name: "description", content: "Valores de maquiagem para noivas, madrinhas, pacote cerimonial e pacote festa de 15 anos." },
+      { name: "description", content: "Valores de maquiagem para noivas, madrinhas, pacote cerimonial e pacote festa de 15 anos. Atendimento a domicílio." },
       { property: "og:title", content: "Pacotes e Preços | Violeta Beauty" },
-      { property: "og:description", content: "Noivas, madrinhas, cerimonial e 15 anos." },
+      { property: "og:description", content: "Noivas, madrinhas, cerimonial, 15 anos e atendimento a domicílio." },
     ],
   }),
   component: Servicos,
@@ -40,6 +40,20 @@ function Servicos() {
           </div>
         ))}
       </div>
+
+      <section className="mt-14 flex flex-col items-start gap-6 rounded-2xl border border-primary bg-gradient-to-br from-primary/10 to-accent/10 p-8 md:flex-row md:items-center">
+        <div className="text-4xl">🏠</div>
+        <div className="flex-1">
+          <h2 className="text-2xl text-gradient-gold">Atendimento a domicílio</h2>
+          <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+            Vamos até você: maquiagem no conforto da sua casa, hotel ou no local do evento. Ideal para noivas, madrinhas e debutantes — você se arruma sem pressa e sem deslocamento.
+          </p>
+          <p className="mt-2 text-sm text-accent">
+            Taxa de deslocamento varia conforme a região e é combinada no agendamento pelo WhatsApp.
+          </p>
+        </div>
+        <WhatsButton msg="Olá! Quero agendar um atendimento a domicílio. Pode me informar a taxa de deslocamento?" className="shrink-0">Agendar a domicílio</WhatsButton>
+      </section>
     </main>
   );
 }

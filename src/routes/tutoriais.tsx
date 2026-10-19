@@ -32,10 +32,46 @@ const grupos = [
   },
 ];
 
+const videos = [
+  { id: "ATZDEbpq3jA", t: "Automaquiagem básica para iniciantes", c: "Laura Kuczynski" },
+  { id: "VVe8uWlFw5M", t: "Make de dia a dia para iniciantes", c: "Ana Lídia Lopes" },
+  { id: "Uuz13RQiAdI", t: "Passo a passo completo para quem não sabe se maquiar", c: "Camila Nunes" },
+  { id: "Uv3QgLpUFuw", t: "Maquiagem artística — Cintilante (She-Ra)", c: "Renata Monteiro" },
+  { id: "N0rhPAoMy9w", t: "Maquiagem artística com glitter", c: "Lorelay Fox" },
+];
+
 function Tutoriais() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
       <SectionTitle kicker="Aprenda" title="Tutoriais" sub="Passo a passo do básico ao artístico." />
+
+      <section className="mb-16">
+        <h2 className="mb-6 text-3xl text-gradient-gold">Vídeos de Tutorial</h2>
+        <p className="mb-8 max-w-2xl text-sm text-muted-foreground">
+          Aulas em vídeo de maquiadoras para você assistir e praticar — do dia a dia às criações artísticas.
+        </p>
+        <div className="grid gap-6 md:grid-cols-3">
+          {videos.map((v) => (
+            <article key={v.id} className="overflow-hidden rounded-2xl border border-border bg-card">
+              <div className="aspect-video w-full">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+                  title={v.t}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg">{v.t}</h3>
+                <p className="mt-1 text-xs text-muted-foreground">por {v.c} · YouTube</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {grupos.map((g) => (
         <section key={g.titulo} className="mb-16">
           <h2 className="mb-6 text-3xl text-gradient-gold">{g.titulo}</h2>
