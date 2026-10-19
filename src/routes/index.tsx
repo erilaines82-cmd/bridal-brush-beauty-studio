@@ -33,7 +33,7 @@ function Index() {
             Sua beleza em <span className="text-gradient-gold italic">destaque</span>
           </h1>
           <p className="mt-6 max-w-md text-lg text-muted-foreground">
-            Maquiagem para noivas, madrinhas, debutantes e criações artísticas que fazem todos olharem para você.
+            Maquiagem para noivas, madrinhas, debutantes e criações artísticas que fazem todos olharem para você. Atendimento a domicílio: vamos até você.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <WhatsButton msg="Olá! Quero agendar uma maquiagem.">Agendar no WhatsApp</WhatsButton>

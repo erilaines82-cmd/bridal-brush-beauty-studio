@@ -6,9 +6,9 @@ export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
       { title: "Pacotes e Preços — Noivas, Madrinhas e 15 Anos | Violeta Beauty" },
-      { name: "description", content: "Valores de maquiagem para noivas, madrinhas, pacote cerimonial e pacote festa de 15 anos." },
+      { name: "description", content: "Valores de maquiagem para noivas, madrinhas, pacote cerimonial e pacote festa de 15 anos. Atendimento a domicílio." },
       { property: "og:title", content: "Pacotes e Preços | Violeta Beauty" },
-      { property: "og:description", content: "Noivas, madrinhas, cerimonial e 15 anos." },
+      { property: "og:description", content: "Noivas, madrinhas, cerimonial, 15 anos e atendimento a domicílio." },
     ],
   }),
   component: Servicos,
