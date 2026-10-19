@@ -32,6 +32,14 @@ const grupos = [
   },
 ];
 
+const videos = [
+  { id: "ATZDEbpq3jA", t: "Automaquiagem básica para iniciantes", c: "Laura Kuczynski" },
+  { id: "VVe8uWlFw5M", t: "Make de dia a dia para iniciantes", c: "Ana Lídia Lopes" },
+  { id: "Uuz13RQiAdI", t: "Passo a passo completo para quem não sabe se maquiar", c: "Camila Nunes" },
+  { id: "Uv3QgLpUFuw", t: "Maquiagem artística — Cintilante (She-Ra)", c: "Renata Monteiro" },
+  { id: "N0rhPAoMy9w", t: "Maquiagem artística com glitter", c: "Lorelay Fox" },
+];
+
 function Tutoriais() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
