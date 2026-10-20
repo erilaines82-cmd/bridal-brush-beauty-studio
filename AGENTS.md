@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep gallery photo groups and artistic tutorial video data in a shared browser-safe module, consumed by reusable media components so gallery, packages, and tutorials stay consistent.
+- Downloaded reference media must use CDN asset pointers and retain source attribution; generated inspiration portraits can be bundled, with their AI origin disclosed separately from real client work.

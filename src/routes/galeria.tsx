@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import art1 from "@/assets/art1.jpg";
-import hero from "@/assets/hero.jpg";
-import noiva from "@/assets/noiva.jpg";
 import { SectionTitle, WhatsButton } from "@/components/site";
+import { PhotoCollection, TutorialVideos } from "@/components/makeup-media";
+import { photoGroups, artisticVideos } from "@/lib/makeup-media";
 
 export const Route = createFileRoute("/galeria")({
   head: () => ({
@@ -11,29 +10,24 @@ export const Route = createFileRoute("/galeria")({
       { name: "description", content: "Fotos de maquiagens artísticas, noivas e festas do portfólio Violeta Beauty." },
       { property: "og:title", content: "Galeria | Violeta Beauty" },
       { property: "og:description", content: "Portfólio de maquiagens artísticas e sociais." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Galeria,
 });
 
-const fotos = [
-  { src: art1, t: "Borboleta Artística" },
-  { src: hero, t: "Glam Violeta" },
-  { src: noiva, t: "Noiva Clássica" },
-];
-
 function Galeria() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
-      <SectionTitle kicker="Portfólio" title="Maquiagens Artísticas" sub="Criações que transformam rostos em arte." />
-      <div className="grid gap-6 md:grid-cols-3">
-        {fotos.map((f) => (
-          <figure key={f.t} className="group relative overflow-hidden rounded-2xl">
-            <img src={f.src} alt={f.t} loading="lazy" width={1024} height={1024} className="aspect-[3/4] w-full object-cover transition duration-500 group-hover:scale-110" />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background to-transparent p-5 font-display text-xl">{f.t}</figcaption>
-          </figure>
-        ))}
-      </div>
+      <SectionTitle kicker="Galeria" title="Maquiagens Artísticas & Ocasiões" sub="Arte, noivas, debutantes e festas: inspirações para cada momento." />
+      <p className="text-center text-sm text-muted-foreground">Imagens de inspiração criadas com IA; não são fotos de clientes ou trabalhos realizados.</p>
+      {photoGroups.slice(0, 1).map((group) => <PhotoCollection key={group.title} group={group} />)}
+      <section className="mt-14 border-y border-border py-10">
+        <h2 className="mb-6 text-3xl text-gradient-gold">Aprenda maquiagem artística</h2>
+        <TutorialVideos videos={artisticVideos} />
+      </section>
+      {photoGroups.slice(1).map((group) => <PhotoCollection key={group.title} group={group} />)}
       <div className="mt-12 text-center">
         <WhatsButton msg="Olá! Quero uma maquiagem artística.">Quero uma maquiagem artística</WhatsButton>
       </div>

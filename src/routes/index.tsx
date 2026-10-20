@@ -12,6 +12,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Portfólio de maquiagem: noivas, madrinhas, 15 anos, maquiagem artística, produtos e tutoriais. Agende pelo WhatsApp." },
       { property: "og:title", content: "Violeta Beauty — Maquiagem Profissional" },
       { property: "og:description", content: "Noivas, madrinhas, 15 anos e maquiagem artística. Agende pelo WhatsApp." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
