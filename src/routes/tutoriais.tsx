@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionTitle } from "@/components/site";
+import { TutorialVideos } from "@/components/makeup-media";
+import { artisticVideos } from "@/lib/makeup-media";
 
 export const Route = createFileRoute("/tutoriais")({
   head: () => ({
@@ -8,6 +10,8 @@ export const Route = createFileRoute("/tutoriais")({
       { name: "description", content: "Aprenda maquiagem do dia a dia, festa e maquiagem artística passo a passo." },
       { property: "og:title", content: "Tutoriais de Maquiagem | Violeta Beauty" },
       { property: "og:description", content: "Tutoriais de maquiagem social e artística." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Tutoriais,
@@ -36,8 +40,6 @@ const videos = [
   { id: "ATZDEbpq3jA", t: "Automaquiagem básica para iniciantes", c: "Laura Kuczynski" },
   { id: "VVe8uWlFw5M", t: "Make de dia a dia para iniciantes", c: "Ana Lídia Lopes" },
   { id: "Uuz13RQiAdI", t: "Passo a passo completo para quem não sabe se maquiar", c: "Camila Nunes" },
-  { id: "Uv3QgLpUFuw", t: "Maquiagem artística — Cintilante (She-Ra)", c: "Renata Monteiro" },
-  { id: "N0rhPAoMy9w", t: "Maquiagem artística com glitter", c: "Lorelay Fox" },
 ];
 
 function Tutoriais() {
@@ -50,26 +52,11 @@ function Tutoriais() {
         <p className="mb-8 max-w-2xl text-sm text-muted-foreground">
           Aulas em vídeo de maquiadoras para você assistir e praticar — do dia a dia às criações artísticas.
         </p>
-        <div className="grid gap-6 md:grid-cols-3">
-          {videos.map((v) => (
-            <article key={v.id} className="overflow-hidden rounded-2xl border border-border bg-card">
-              <div className="aspect-video w-full">
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${v.id}`}
-                  title={v.t}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg">{v.t}</h3>
-                <p className="mt-1 text-xs text-muted-foreground">por {v.c} · YouTube</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <TutorialVideos videos={videos} />
+      </section>
+      <section className="mb-16">
+        <h2 className="mb-6 text-3xl text-gradient-gold">Vídeos de maquiagem artística</h2>
+        <TutorialVideos videos={artisticVideos} />
       </section>
 
       {grupos.map((g) => (

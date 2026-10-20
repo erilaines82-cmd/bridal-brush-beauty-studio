@@ -6,7 +6,7 @@ const links = [
   { to: "/servicos", label: "Pacotes" },
   { to: "/produtos", label: "Produtos" },
   { to: "/tutoriais", label: "Tutoriais" },
-  { to: "/galeria", label: "Galeria" },
+  { to: "/galeria", label: "Maquiagem artística & Galeria" },
 ] as const;
 
 export function WhatsButton({ msg, children, className = "" }: { msg: string; children: React.ReactNode; className?: string }) {

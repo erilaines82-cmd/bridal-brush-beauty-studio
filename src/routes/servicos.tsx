@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionTitle, WhatsButton } from "@/components/site";
 import { brl } from "@/lib/site";
+import { PhotoCollection } from "@/components/makeup-media";
+import { photoGroups } from "@/lib/makeup-media";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
@@ -9,6 +11,8 @@ export const Route = createFileRoute("/servicos")({
       { name: "description", content: "Valores de maquiagem para noivas, madrinhas, pacote cerimonial e pacote festa de 15 anos. Atendimento a domicílio." },
       { property: "og:title", content: "Pacotes e Preços | Violeta Beauty" },
       { property: "og:description", content: "Noivas, madrinhas, cerimonial, 15 anos e atendimento a domicílio." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Servicos,
@@ -41,6 +45,10 @@ function Servicos() {
         ))}
       </div>
 
+      <div className="mt-14 border-t border-border pt-8">
+        <p className="text-sm text-muted-foreground">Inspirações criadas com IA — não são fotos de clientes.</p>
+        {photoGroups.slice(1).map((group) => <PhotoCollection key={group.title} group={group} />)}
+      </div>
       <section className="mt-14 flex flex-col items-start gap-6 rounded-2xl border border-primary bg-gradient-to-br from-primary/10 to-accent/10 p-8 md:flex-row md:items-center">
         <div className="text-4xl">🏠</div>
         <div className="flex-1">
