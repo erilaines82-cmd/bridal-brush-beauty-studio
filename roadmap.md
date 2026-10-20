@@ -1,4 +1,4 @@
-- [ ] Ampliar fotos de maquiagem artística, noivas, debutantes e festas.
-- [ ] Mostrar aulas de maquiagem artística na galeria.
-- [ ] Substituir a imagem repetida dos produtos por fotos reais de referência por categoria.
-- [ ] Verificar páginas e imagens no site.
+- [x] Ampliar fotos de maquiagem artística, noivas, debutantes e festas.
+- [x] Mostrar aulas de maquiagem artística na galeria.
+- [x] Substituir a imagem repetida dos produtos por fotos reais de referência por categoria.
+- [x] Verificar páginas e imagens no site.

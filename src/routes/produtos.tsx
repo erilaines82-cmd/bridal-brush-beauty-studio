@@ -23,12 +23,12 @@ export const Route = createFileRoute("/produtos")({
 });
 
 const itens = [
-  { n: "Paleta Sombras Violeta Gold", p: 189.9, img: palette.url, ref: "Maybelline The Nudes", source: "https://well.ca/products/maybelline-the-nudes-eye-shadow_99882.html" },
+  { n: "Paleta Sombras Violeta Gold", p: 189.9, img: palette.url, ref: "Maybelline The Nudes", source: "https://well.ca/products/maybelline-the-nudes-eye-shadow_95144.html" },
   { n: "Batom Matte Luxo", p: 69.9, img: matte.url, ref: "Maybelline Vivid Matte Liquid", source: "https://well.ca/products/maybelline-color-sensational-vivid_114538.html" },
   { n: "Kit Pincéis Profissionais", p: 159.9, img: brushes.url, ref: "Foto de pincéis · Unsplash / CC0", source: "https://commons.wikimedia.org/wiki/File:Makeup_brush_set_(Unsplash).jpg" },
   { n: "Blush Rosé Iluminado", p: 89.9, img: blush.url, ref: "Maybelline Master Hi-Light", source: "https://well.ca/products/maybelline-face-studio-master_88831.html" },
-  { n: "Base Alta Cobertura", p: 129.9, img: foundation.url, ref: "Maybelline Dream Wonder", source: "https://makeup-api.herokuapp.com/" },
-  { n: "Batom Cremoso Nude", p: 64.9, img: nude.url, ref: "Maybelline Color Sensational The Buffs", source: "https://makeup-api.herokuapp.com/" },
+  { n: "Base Alta Cobertura", p: 129.9, img: foundation.url, ref: "Maybelline Dream Wonder", source: "https://well.ca/products/maybelline-dream-wonder-liquid-touch_96732.html" },
+  { n: "Batom Cremoso Nude", p: 64.9, img: nude.url, ref: "Maybelline Color Sensational The Buffs", source: "https://well.ca/products/maybelline-color-sensational-the_88857.html" },
 ];
 
 function Produtos() {
