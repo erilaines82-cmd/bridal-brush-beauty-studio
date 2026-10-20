@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { wa } from "@/lib/site";
+import { wa, WHATSAPP_DISPLAY, EMAIL, INSTAGRAM, INSTAGRAM_URL } from "@/lib/site";
 
 const links = [
   { to: "/", label: "Início" },
@@ -44,6 +44,15 @@ export function Footer() {
     <footer className="mt-24 border-t border-border py-10 text-center text-sm text-muted-foreground">
       <p className="font-display text-xl text-gradient-gold">Violeta Beauty</p>
       <p className="mt-2">Maquiagem profissional e artística • Atendimento com hora marcada</p>
+      <div className="mt-5 flex flex-col items-center gap-2">
+        <a href={wa("Olá! Gostaria de agendar uma maquiagem.")} target="_blank" rel="noreferrer" className="hover:text-primary">
+          WhatsApp: {WHATSAPP_DISPLAY}
+        </a>
+        <a href={`mailto:${EMAIL}`} className="hover:text-primary">{EMAIL}</a>
+        <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-primary">
+          Instagram: @{INSTAGRAM}
+        </a>
+      </div>
       <WhatsButton msg="Olá! Gostaria de agendar uma maquiagem." className="mt-5">Agendar pelo WhatsApp</WhatsButton>
     </footer>
   );
