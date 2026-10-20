@@ -33,6 +33,7 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
   --color-whatsapp: var(--whatsapp);
+  --color-product-photo: var(--product-photo);
 }
 
 :root {
@@ -58,6 +59,7 @@
   --ring: oklch(0.82 0.12 85);
   --gold: oklch(0.82 0.12 85);
   --whatsapp: oklch(0.68 0.17 150);
+  --product-photo: oklch(1 0 0);
   --gradient-hero: radial-gradient(ellipse at top right, oklch(0.42 0.2 320) 0%, oklch(0.2 0.09 305) 60%);
   --gradient-gold: linear-gradient(135deg, oklch(0.88 0.1 90), oklch(0.72 0.13 70));
   --shadow-glow: 0 20px 60px -15px oklch(0.7 0.2 340 / 55%);

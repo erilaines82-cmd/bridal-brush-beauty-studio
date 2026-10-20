@@ -35,4 +35,5 @@ export const photoGroups = [
 export const artisticVideos = [
   { id: "Uv3QgLpUFuw", t: "Maquiagem artística — Cintilante (She-Ra)", c: "Renata Monteiro" },
   { id: "N0rhPAoMy9w", t: "Maquiagem artística com glitter", c: "Lorelay Fox" },
+  { id: "KXqSkko2vvQ", t: "Base de caveira mexicana — aula em inglês", c: "Howcast" },
 ];
