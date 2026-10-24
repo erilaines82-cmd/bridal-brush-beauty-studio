@@ -17,23 +17,20 @@ export const Route = createFileRoute("/agendamento")({
 });
 
 function PartnerCard({ name, display, index }: { name: string; display: string; index: number }) {
+  const partner = PARTNERS[index];
   return (
     <div className="flex flex-col items-center rounded-3xl border border-border bg-card p-8 text-center shadow-glow transition hover:-translate-y-1">
       <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/15 font-display text-3xl text-gradient-gold">
         {name.charAt(0)}
       </div>
       <h2 className="mt-5 font-display text-3xl">{name}</h2>
-      <p className="mt-1 text-sm uppercase tracking-[0.25em] text-accent">Sócia • Maquiadora {index === 0 ? "01" : "02"}</p>
+      <p className="mt-1 text-sm uppercase tracking-[0.25em] text-accent">Sócia fundadora</p>
       <p className="mt-4 text-muted-foreground">
-        {index === 0
-          ? "Atende noivas, madrinhas e debutantes. Fala com você do primeiro contato até o grande dia."
-          : "Especialista em maquiagem artística e festas. Cuida de cada detalhe do seu look."}
+        Fale direto com {name.split(" ")[0]} para tirar dúvidas, combinar data, horário e endereço do seu atendimento.
       </p>
-      <a href={`https://wa.me/${PARTNERS[index].whatsapp}`} target="_blank" rel="noreferrer" className="sr-only">
-        WhatsApp {display}
-      </a>
       <WhatsButton
         msg={`Olá, ${name.split(" ")[0]}! Gostaria de agendar uma maquiagem.`}
+        href={waPartner(partner, `Olá, ${name.split(" ")[0]}! Gostaria de agendar uma maquiagem.`)}
         className="mt-6"
       >
         Agendar com {name.split(" ")[0]}
