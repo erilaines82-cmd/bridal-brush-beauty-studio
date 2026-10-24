@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionTitle, WhatsButton } from "@/components/site";
-import { PARTNERS, waPartner, EMAIL, INSTAGRAM, INSTAGRAM_URL, EMAIL as _EMAIL } from "@/lib/site";
+import { PARTNERS, waPartner, EMAIL, INSTAGRAM, INSTAGRAM_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/agendamento")({
   head: () => ({
