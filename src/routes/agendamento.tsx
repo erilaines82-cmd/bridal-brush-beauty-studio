@@ -51,8 +51,8 @@ function Agendamento() {
       />
 
       <div className="grid gap-6 md:grid-cols-2">
-        {PARTNERS.map((p, i) => (
-          <PartnerCard key={p.whatsapp} name={p.name} display={p.display} index={i} />
+        {PARTNERS.map((p) => (
+          <PartnerCard key={p.whatsapp} partner={p} />
         ))}
       </div>
 
