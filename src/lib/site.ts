@@ -1,7 +1,7 @@
 // Contato real — formato internacional sem símbolos
 export const WHATSAPP = "5521993891418";
 export const WHATSAPP_DISPLAY = "(21) 99389-1418";
-export const EMAIL = "violetabeauty@gmail.com";
+export const EMAIL = "vioeltabeauty@gmail.com";
 export const INSTAGRAM = "violetabeauty2026";
 export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM}`;
 
