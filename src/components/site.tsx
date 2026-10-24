@@ -1,18 +1,19 @@
 import { Link } from "@tanstack/react-router";
-import { wa, WHATSAPP_DISPLAY, EMAIL, INSTAGRAM, INSTAGRAM_URL } from "@/lib/site";
+import { wa, WHATSAPP_DISPLAY, EMAIL, INSTAGRAM, INSTAGRAM_URL, PARTNERS, waPartner } from "@/lib/site";
 
 const links = [
   { to: "/", label: "Início" },
+  { to: "/agendamento", label: "Agendamento" },
   { to: "/servicos", label: "Pacotes" },
   { to: "/produtos", label: "Produtos" },
   { to: "/tutoriais", label: "Tutoriais" },
   { to: "/galeria", label: "Maquiagem artística & Galeria" },
 ] as const;
 
-export function WhatsButton({ msg, children, className = "" }: { msg: string; children: React.ReactNode; className?: string }) {
+export function WhatsButton({ msg, href, children, className = "" }: { msg: string; href?: string; children: React.ReactNode; className?: string }) {
   return (
     <a
-      href={wa(msg)}
+      href={href ?? wa(msg)}
       target="_blank"
       rel="noreferrer"
       className={`inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-semibold text-foreground transition hover:scale-105 hover:shadow-glow ${className}`}
@@ -45,9 +46,11 @@ export function Footer() {
       <p className="font-display text-xl text-gradient-gold">Violeta Beauty</p>
       <p className="mt-2">Maquiagem profissional e artística • Atendimento com hora marcada</p>
       <div className="mt-5 flex flex-col items-center gap-2">
-        <a href={wa("Olá! Gostaria de agendar uma maquiagem.")} target="_blank" rel="noreferrer" className="hover:text-primary">
-          WhatsApp: {WHATSAPP_DISPLAY}
-        </a>
+        {PARTNERS.map((p) => (
+          <a key={p.whatsapp} href={waPartner(p, "Olá! Gostaria de agendar uma maquiagem.")} target="_blank" rel="noreferrer" className="hover:text-primary">
+            WhatsApp {p.name}: {p.display}
+          </a>
+        ))}
         <a href={`mailto:${EMAIL}`} className="hover:text-primary">{EMAIL}</a>
         <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-primary">
           Instagram: @{INSTAGRAM}
