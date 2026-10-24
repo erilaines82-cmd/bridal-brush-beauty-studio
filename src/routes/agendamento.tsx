@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionTitle, WhatsButton } from "@/components/site";
-import { PARTNERS, waPartner, EMAIL, INSTAGRAM, INSTAGRAM_URL } from "@/lib/site";
+import { PARTNERS, waPartner, EMAIL, INSTAGRAM, INSTAGRAM_URL, type Partner } from "@/lib/site";
 
 export const Route = createFileRoute("/agendamento")({
   head: () => ({
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/agendamento")({
   component: Agendamento,
 });
 
-function PartnerCard({ partner, index }: { partner: Partner; index: number }) {
+function PartnerCard({ partner }: { partner: Partner }) {
   const name = partner.name;
   const display = partner.display;
   return (
