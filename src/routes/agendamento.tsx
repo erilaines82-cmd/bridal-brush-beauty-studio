@@ -16,8 +16,9 @@ export const Route = createFileRoute("/agendamento")({
   component: Agendamento,
 });
 
-function PartnerCard({ name, display, index }: { name: string; display: string; index: number }) {
-  const partner = PARTNERS[index];
+function PartnerCard({ partner, index }: { partner: Partner; index: number }) {
+  const name = partner.name;
+  const display = partner.display;
   return (
     <div className="flex flex-col items-center rounded-3xl border border-border bg-card p-8 text-center shadow-glow transition hover:-translate-y-1">
       <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/15 font-display text-3xl text-gradient-gold">
